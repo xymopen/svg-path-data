@@ -9,7 +9,11 @@ type InvertTypeofMap = {
 }
 
 const hasPropertyAs = <T, K extends PropertyKey, U extends keyof InvertTypeofMap>(value: T, key: K, type: U):
-	value is Extract<T, { [P in K]: InvertTypeofMap[U] }> =>
+	value is (
+		Extract<T, { [P in K]: InvertTypeofMap[U] }> extends never ?
+		T & { [P in K]: InvertTypeofMap[U] } :
+		Extract<T, { [P in K]: InvertTypeofMap[U] }>
+	) =>
 	Reflect.has(Object(value), key) && typeof value[key as unknown as keyof T] === type
 
 export default hasPropertyAs
