@@ -16,8 +16,7 @@ declare module "*.css" {
 }
 
 // images
-// .svg would be transform to a function component by svgr
 declare module "*.svg" {
-	import { JSX } from "preact"
-	export default function (props: JSX.IntrinsicSVGElements["svg"]): JSX.Element
+	const content: string;
+	export default content;
 }
