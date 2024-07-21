@@ -1,5 +1,4 @@
 import hasOrInheritsKey from "./has-or-inherits-key"
-import hasPropertyAs from "./has-property-as"
 
 /**
  * TypeScript needs a little help to distinguish `IteratorYieldResult`
@@ -19,7 +18,9 @@ export type ParserResultType<T extends Parser<unknown, any>> = T extends Parser<
  * Helper to convert an iterable or a iterator to an input
  */
 export const fromIt = <T>(it: Iterable<T> | Iterator<T>): Input<T> => {
-	if (hasPropertyAs(it, 'next', 'function')) {
+	if (hasOrInheritsKey(it, 'next')) {
+		// Per the spec se, we don't check the type of `next` to tell
+		// if it is an iterator, but `bind()` would check it anyway
 		return Function.prototype.bind.call(it.next, it)
 	} else {
 		return fromIt(it[Symbol.iterator]())
