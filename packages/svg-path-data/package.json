@@ -1,0 +1,27 @@
+{
+	"name": "svg-path-data",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"main": "dist/index.js",
+	"exports": {
+		".": "./dist/index.js",
+		"./index": "./dist/index.js",
+		"./index.js": "./dist/index.js",
+		"./index.mjs": "./dist/index.js"
+	},
+	"scripts": {
+		"dev": "rspack build --watch --mode=development --node-env=development",
+		"build": "rspack build --mode=production --node-env=production"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"devDependencies": {
+		"@rspack/cli": "catalog:",
+		"@rspack/core": "catalog:",
+		"@types/node": "catalog:",
+		"@types/webpack-env": "catalog:",
+		"typescript": "catalog:"
+	}
+}
