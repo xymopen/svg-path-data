@@ -25,7 +25,14 @@ catalogs:
       specifier: ~5.3.3
       version: 5.3.3
 
+patchedDependencies:
+  '@rspack/plugin-preact-refresh':
+    hash: lnlgu6ima7yc5izm4rja3sptd4
+    path: patches/@rspack__plugin-preact-refresh.patch
+
 importers:
+
+  .: {}
 
   packages/parser-combinators:
     devDependencies:
@@ -93,7 +100,7 @@ importers:
         version: 0.7.5
       '@rspack/plugin-preact-refresh':
         specifier: 0.7.5
-        version: 0.7.5(@prefresh/core@1.5.2(preact@10.23.1))(@prefresh/utils@1.2.0)
+        version: 0.7.5(patch_hash=lnlgu6ima7yc5izm4rja3sptd4)(@prefresh/core@1.5.2(preact@10.23.1))(@prefresh/utils@1.2.0)
       '@svgr/webpack':
         specifier: 8.1.0
         version: 8.1.0(typescript@5.3.3)
@@ -3418,7 +3425,7 @@ snapshots:
       - webpack
       - webpack-cli
 
-  '@rspack/plugin-preact-refresh@0.7.5(@prefresh/core@1.5.2(preact@10.23.1))(@prefresh/utils@1.2.0)':
+  '@rspack/plugin-preact-refresh@0.7.5(patch_hash=lnlgu6ima7yc5izm4rja3sptd4)(@prefresh/core@1.5.2(preact@10.23.1))(@prefresh/utils@1.2.0)':
     dependencies:
       '@prefresh/core': 1.5.2(preact@10.23.1)
       '@prefresh/utils': 1.2.0

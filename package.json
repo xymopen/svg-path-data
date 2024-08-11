@@ -1,0 +1,7 @@
+{
+	"pnpm": {
+		"patchedDependencies": {
+			"@rspack/plugin-preact-refresh": "patches/@rspack__plugin-preact-refresh.patch"
+		}
+	}
+}
