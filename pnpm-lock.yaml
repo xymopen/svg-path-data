@@ -24,6 +24,24 @@ catalogs:
 
 importers:
 
+  packages/parser-combinators:
+    devDependencies:
+      '@rspack/cli':
+        specifier: 'catalog:'
+        version: 0.7.5(@rspack/core@0.7.5)(@types/express@4.17.21)(webpack@5.93.0)
+      '@rspack/core':
+        specifier: 'catalog:'
+        version: 0.7.5
+      '@types/node':
+        specifier: 'catalog:'
+        version: 22.5.0
+      '@types/webpack-env':
+        specifier: 'catalog:'
+        version: 1.18.5
+      typescript:
+        specifier: 'catalog:'
+        version: 5.3.3
+
   packages/svg-path-data:
     devDependencies:
       '@rspack/cli':
