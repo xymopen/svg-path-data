@@ -11,8 +11,12 @@ const TsSwcConfig = JSON.parse(readFileSync(resolve(".swc.typescript.swcrc"), "u
 
 const config = defineConfig({
 	entry: {
+		composed: "./src/composed.ts",
+		core: "./src/core.ts",
 		index: "./src/index.ts",
-		strings: "./src/strings.ts"
+		strings: "./src/strings.ts",
+		types: "./src/types.ts",
+		utils: "./src/utils.ts"
 	},
 	output: {
 		filename: '[name].js',

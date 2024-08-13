@@ -6,12 +6,24 @@
 	"main": "dist/index.js",
 	"exports": {
 		".": "./dist/index.js",
+		"./composed": "./dist/composed.js",
+		"./composed.js": "./dist/composed.js",
+		"./composed.mjs": "./dist/composed.js",
+		"./core": "./dist/core.js",
+		"./core.js": "./dist/core.js",
+		"./core.mjs": "./core/index.js",
 		"./index": "./dist/index.js",
 		"./index.js": "./dist/index.js",
 		"./index.mjs": "./dist/index.js",
 		"./strings": "./dist/strings.js",
 		"./strings.js": "./dist/strings.js",
-		"./strings.mjs": "./dist/strings.js"
+		"./strings.mjs": "./dist/stringsx.js",
+		"./types": "./dist/types.js",
+		"./types.js": "./dist/types.js",
+		"./types.mjs": "./types/index.js",
+		"./utils": "./dist/utils.js",
+		"./utils.js": "./dist/utils.js",
+		"./utils.mjs": "./utils/index.js"
 	},
 	"scripts": {
 		"dev": "rspack build --watch --mode=development --node-env=development",
