@@ -60,6 +60,37 @@ importers:
         specifier: 'catalog:'
         version: 5.3.3
 
+  packages/web:
+    dependencies:
+      preact:
+        specifier: ^10.22.1
+        version: 10.23.1
+    devDependencies:
+      '@prefresh/core':
+        specifier: ^1.5.1
+        version: 1.5.2(preact@10.23.1)
+      '@prefresh/utils':
+        specifier: ^1.2.0
+        version: 1.2.0
+      '@rspack/cli':
+        specifier: 'catalog:'
+        version: 0.7.5(@rspack/core@0.7.5)(@types/express@4.17.21)(webpack@5.93.0)
+      '@rspack/core':
+        specifier: 'catalog:'
+        version: 0.7.5
+      '@rspack/plugin-preact-refresh':
+        specifier: 0.7.5
+        version: 0.7.5(@prefresh/core@1.5.2(preact@10.23.1))(@prefresh/utils@1.2.0)
+      '@types/node':
+        specifier: 'catalog:'
+        version: 22.2.0
+      '@types/webpack-env':
+        specifier: 'catalog:'
+        version: 1.18.5
+      typescript:
+        specifier: 'catalog:'
+        version: 5.3.3
+
 packages:
 
   '@discoveryjs/json-ext@0.5.7':
@@ -104,6 +135,14 @@ packages:
 
   '@polka/url@1.0.0-next.25':
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
+
+  '@prefresh/core@1.5.2':
+    resolution: {integrity: sha512-A/08vkaM1FogrCII5PZKCrygxSsc11obExBScm3JF1CryK2uDS3ZXeni7FeKCx1nYdUkj4UcJxzPzc1WliMzZA==}
+    peerDependencies:
+      preact: ^10.0.0
+
+  '@prefresh/utils@1.2.0':
+    resolution: {integrity: sha512-KtC/fZw+oqtwOLUFM9UtiitB0JsVX0zLKNyRTA332sqREqSALIIQQxdUCS1P3xR/jT1e2e8/5rwH6gdcMLEmsQ==}
 
   '@rspack/binding-darwin-arm64@0.7.5':
     resolution: {integrity: sha512-mNBIm36s1BA7v4SL/r4f3IXIsjyH5CZX4eXMRPE52lBc3ClVuUB7d/8zk8dkyjJCMAj8PsZSnAJ3cfXnn7TN4g==}
@@ -176,6 +215,12 @@ packages:
     resolution: {integrity: sha512-jDXfccjlHMXOxOK++uxWhLUKb0L3NuA6Ujc/J75NhWYq1YxmVhNOtUWCdunuJQ1BNeLlgG/S5X5iBCbZ09S0Jg==}
     peerDependencies:
       '@rspack/core': '*'
+
+  '@rspack/plugin-preact-refresh@0.7.5':
+    resolution: {integrity: sha512-S29IsGHPL9/ewZ00dzgx4zFKFtpLsvKqoOHOgSaBx8MmhlwehD3nR02/2FC+xi8QB1o1UN/cOB3ukkB2q3gX4g==}
+    peerDependencies:
+      '@prefresh/core': ^1.5.0
+      '@prefresh/utils': ^1.2.0
 
   '@types/body-parser@1.19.5':
     resolution: {integrity: sha512-fB3Zu92ucau0iQ0JMCFQE7b/dv8Ot07NI3KaZIkIUNXq82k4eBAqUaneXfleGY9JWskeS9y+u0nXMyspcuQrCg==}
@@ -991,6 +1036,9 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
+  preact@10.23.1:
+    resolution: {integrity: sha512-O5UdRsNh4vdZaTieWe3XOgSpdMAmkIYBCT3VhQDlKrzyCm8lUYsk0fmVEvoQQifoOjFRTaHZO69ylrzTW2BH+A==}
+
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
@@ -1434,6 +1482,12 @@ snapshots:
 
   '@polka/url@1.0.0-next.25': {}
 
+  '@prefresh/core@1.5.2(preact@10.23.1)':
+    dependencies:
+      preact: 10.23.1
+
+  '@prefresh/utils@1.2.0': {}
+
   '@rspack/binding-darwin-arm64@0.7.5':
     optional: true
 
@@ -1521,6 +1575,11 @@ snapshots:
       - utf-8-validate
       - webpack
       - webpack-cli
+
+  '@rspack/plugin-preact-refresh@0.7.5(@prefresh/core@1.5.2(preact@10.23.1))(@prefresh/utils@1.2.0)':
+    dependencies:
+      '@prefresh/core': 1.5.2(preact@10.23.1)
+      '@prefresh/utils': 1.2.0
 
   '@types/body-parser@1.19.5':
     dependencies:
@@ -2337,6 +2396,8 @@ snapshots:
   picocolors@1.0.1: {}
 
   picomatch@2.3.1: {}
+
+  preact@10.23.1: {}
 
   process-nextick-args@2.0.1: {}
 
