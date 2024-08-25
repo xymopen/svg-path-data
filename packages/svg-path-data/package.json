@@ -8,7 +8,10 @@
 		".": "./dist/index.js",
 		"./index": "./dist/index.js",
 		"./index.js": "./dist/index.js",
-		"./index.mjs": "./dist/index.js"
+		"./index.mjs": "./dist/index.js",
+		"./stringify": "./dist/stringify.js",
+		"./stringify.js": "./dist/stringify.js",
+		"./stringify.mjs": "./dist/stringify.js"
 	},
 	"scripts": {
 		"dev": "rspack build --watch --mode=development --node-env=development",
