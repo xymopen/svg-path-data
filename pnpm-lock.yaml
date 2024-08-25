@@ -46,6 +46,10 @@ importers:
         version: 5.3.3
 
   packages/svg-path-data:
+    dependencies:
+      parser-combinators:
+        specifier: 'workspace:'
+        version: link:../parser-combinators
     devDependencies:
       '@rspack/cli':
         specifier: 'catalog:'

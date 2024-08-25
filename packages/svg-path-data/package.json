@@ -17,6 +17,9 @@
 	"engines": {
 		"node": ">=20"
 	},
+	"dependencies": {
+		"parser-combinators": "workspace:"
+	},
 	"devDependencies": {
 		"@rspack/cli": "catalog:",
 		"@rspack/core": "catalog:",
