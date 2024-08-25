@@ -9,6 +9,9 @@
 		"./index": "./dist/index.js",
 		"./index.js": "./dist/index.js",
 		"./index.mjs": "./dist/index.js",
+		"./position-state": "./dist/position-state.js",
+		"./position-state.js": "./dist/position-state.js",
+		"./position-state.mjs": "./dist/position-state.js",
 		"./stringify": "./dist/stringify.js",
 		"./stringify.js": "./dist/stringify.js",
 		"./stringify.mjs": "./dist/stringify.js"

@@ -12,6 +12,7 @@ const TsSwcConfig = JSON.parse(readFileSync(resolve(".swc.typescript.swcrc"), "u
 const config = defineConfig({
 	entry: {
 		index: "./src/index.ts",
+		'position-state': "./src/position-state.ts",
 		stringify: "./src/stringify.ts"
 	},
 	output: {
