@@ -19,7 +19,9 @@
 		"@rspack/cli": "catalog:",
 		"@rspack/core": "catalog:",
 		"@rspack/plugin-preact-refresh": "0.7.5",
+		"@svgr/webpack": "8.1.0",
 		"@types/node": "catalog:",
+		"@types/webpack": "catalog:",
 		"@types/webpack-env": "catalog:",
 		"typescript": "catalog:"
 	}

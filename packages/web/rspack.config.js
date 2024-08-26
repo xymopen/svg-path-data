@@ -18,7 +18,33 @@ const config = defineConfig({
 		rules: [
 			{
 				test: /\.svg$/,
+				issuer: {
+					not: /\.[jt]sx?$/
+				},
 				type: "asset"
+			},
+			{
+				test: /\.svg$/,
+				issuer: /\.[jt]sx?$/,
+				use: [
+					{
+						loader: "builtin:swc-loader",
+						options: {
+							...EsSwcConfig,
+							env: {
+								...EsSwcConfig.env,
+								targets
+							}
+						}
+					},
+					{
+						loader: "@svgr/webpack",
+						options: /** @type {SvgrLoaderOption} */ ({
+							babel: false,
+							runtimeConfig: true
+						})
+					}
+				],
 			},
 			{
 				test: /\.jsx?$/,
@@ -100,3 +126,10 @@ export default (env, argv) => {
  * @property {boolean} [RSPACK_BUILD]
  * @property {boolean} [RSPACK_WATCH]
  */
+
+/**
+ * @template {import('webpack').LoaderContext<unknown>} T
+ * @typedef {T extends import('webpack').LoaderContext<infer P> ? P : never} WebpackLoaderContent
+ */
+
+/** @typedef {WebpackLoaderContent<ThisParameterType<import('@svgr/webpack').default>>} SvgrLoaderOption */
