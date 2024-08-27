@@ -11,7 +11,16 @@
 			"./src/types/*"
 		],
 		"jsxImportSource": "preact",
-		"declarationDir": "./dist"
+		"declarationDir": "./dist",
+		"baseUrl": ".",
+		"paths": {
+			"assets/*": [
+				"./assets/*"
+			],
+			"components/*": [
+				"./src/components/*"
+			]
+		}
 	},
 	"include": [
 		"./src"

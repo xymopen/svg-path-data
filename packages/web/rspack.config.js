@@ -85,7 +85,11 @@ const config = defineConfig({
 		css: true
 	},
 	resolve: {
-		extensions: [".js", ".jsx", ".json", ".ts", ".tsx", ".wasm"]
+		extensions: [".js", ".jsx", ".json", ".ts", ".tsx", ".wasm"],
+		alias: {
+			"assets": resolve("assets"),
+			"components": resolve("src/components")
+		}
 	}
 });
 
