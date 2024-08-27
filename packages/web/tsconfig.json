@@ -16,13 +16,18 @@
 		"paths": {
 			"assets/*": [
 				"./assets/*"
-			],
-			"components/*": [
-				"./src/components/*"
 			]
 		}
 	},
 	"include": [
 		"./src"
+	],
+	"references": [
+		{
+			"path": "../parser-combinators"
+		},
+		{
+			"path": "../svg-path-data"
+		}
 	]
 }

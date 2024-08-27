@@ -69,9 +69,15 @@ importers:
 
   packages/web:
     dependencies:
+      parser-combinators:
+        specifier: 'workspace:'
+        version: link:../parser-combinators
       preact:
         specifier: ^10.22.1
         version: 10.23.1
+      svg-path-data:
+        specifier: 'workspace:'
+        version: link:../svg-path-data
     devDependencies:
       '@prefresh/core':
         specifier: ^1.5.1

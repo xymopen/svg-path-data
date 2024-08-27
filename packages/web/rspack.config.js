@@ -87,8 +87,7 @@ const config = defineConfig({
 	resolve: {
 		extensions: [".js", ".jsx", ".json", ".ts", ".tsx", ".wasm"],
 		alias: {
-			"assets": resolve("assets"),
-			"components": resolve("src/components")
+			"assets": resolve("assets")
 		}
 	}
 });
