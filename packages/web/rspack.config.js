@@ -117,7 +117,9 @@ export default (env, argv) => {
 		plugins.push(new rspack.HtmlRspackPlugin({
 			template: "./index.html"
 		}))
-		plugins.push(new PreactRefreshPlugin({}))
+		plugins.push(new PreactRefreshPlugin({
+			include: /^\.[/\\].*\.([jt]sx?)$/
+		}))
 	}
 
 	return config;
