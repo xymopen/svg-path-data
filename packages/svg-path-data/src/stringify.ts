@@ -42,8 +42,8 @@ const stringifyCommandParameters = (current: AllCommand, previous?: AllCommand):
 			',' + current.parameters.rxy[1] +
 			' ' + current.parameters.phi +
 			' ' + (current.parameters.largeArcFlag ? '1' : '0') +
-			' ' + (current.parameters.sweepFlag ? '1' : '0') +
-			' ' + current.parameters.xy[0] +
+			+ stringifyNumber(current.parameters.sweepFlag ? 1 : 0, current.parameters.largeArcFlag ? 1 : 0, ' ') +
+			+ stringifyNumber(current.parameters.xy[0], current.parameters.sweepFlag ? 1 : 0, ' ') +
 			stringifyNumber(current.parameters.xy[1], current.parameters.xy[0], ',')
 	} else {
 		throw new TypeError('Unknown command')

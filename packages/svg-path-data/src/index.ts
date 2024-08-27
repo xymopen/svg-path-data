@@ -103,9 +103,9 @@ const ellipticalArcArgument = bind(
 		number,
 		commaWsp,
 		flag,
-		commaWsp,
+		optional(commaWsp),
 		flag,
-		commaWsp,
+		optional(commaWsp),
 		coordinatePair
 	),
 	([rx, , ry, , phi, , largeArcFlag, , sweepFlag, , xy]) => ({

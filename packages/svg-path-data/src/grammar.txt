@@ -44,7 +44,7 @@ elliptical-arc =
     ( "A" | "a" ) wsp* elliptical-arc-argument (comma-wsp? elliptical-arc-argument)*
 elliptical-arc-argument =
     nonnegative-number comma-wsp? nonnegative-number comma-wsp?
-        number comma-wsp flag comma-wsp flag comma-wsp coordinate-pair
+        number comma-wsp flag comma-wsp? flag comma-wsp? coordinate-pair
 coordinate-pair =
     coordinate comma-wsp? coordinate
 coordinate =
@@ -79,4 +79,4 @@ digit =
 wsp =
     (#x20 | #x9 | #xD | #xA)
 
-https://www.w3.org/Graphics/SVG/1.1/paths.html#PathDataBNF
+https://www.w3.org/TR/SVG2/paths.html#PathDataBNF
