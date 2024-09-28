@@ -1,4 +1,10 @@
 {
+	"devDependencies": {
+		"@types/node": "ts5.3",
+		"@types/webpack": "ts5.3",
+		"@types/webpack-env": "ts5.3",
+		"typescript": "~5.3.3"
+	},
 	"pnpm": {
 		"patchedDependencies": {
 			"@rspack/plugin-preact-refresh": "patches/@rspack__plugin-preact-refresh.patch"

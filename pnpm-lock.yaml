@@ -12,18 +12,6 @@ catalogs:
     '@rspack/core':
       specifier: 0.7.5
       version: 0.7.5
-    '@types/node':
-      specifier: ts5.3
-      version: 22.5.0
-    '@types/webpack':
-      specifier: ts5.3
-      version: 5.28.5
-    '@types/webpack-env':
-      specifier: ts5.3
-      version: 1.18.5
-    typescript:
-      specifier: ~5.3.3
-      version: 5.3.3
 
 patchedDependencies:
   '@rspack/plugin-preact-refresh':
@@ -32,7 +20,20 @@ patchedDependencies:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      '@types/node':
+        specifier: ts5.3
+        version: 22.5.0
+      '@types/webpack':
+        specifier: ts5.3
+        version: 5.28.5
+      '@types/webpack-env':
+        specifier: ts5.3
+        version: 1.18.5
+      typescript:
+        specifier: ~5.3.3
+        version: 5.3.3
 
   packages/parser-combinators:
     devDependencies:
@@ -42,15 +43,6 @@ importers:
       '@rspack/core':
         specifier: 'catalog:'
         version: 0.7.5
-      '@types/node':
-        specifier: 'catalog:'
-        version: 22.5.0
-      '@types/webpack-env':
-        specifier: 'catalog:'
-        version: 1.18.5
-      typescript:
-        specifier: 'catalog:'
-        version: 5.3.3
 
   packages/svg-path-data:
     dependencies:
@@ -64,15 +56,6 @@ importers:
       '@rspack/core':
         specifier: 'catalog:'
         version: 0.7.5
-      '@types/node':
-        specifier: 'catalog:'
-        version: 22.5.0
-      '@types/webpack-env':
-        specifier: 'catalog:'
-        version: 1.18.5
-      typescript:
-        specifier: 'catalog:'
-        version: 5.3.3
 
   packages/web:
     dependencies:
@@ -101,18 +84,6 @@ importers:
       '@rspack/plugin-preact-refresh':
         specifier: 0.7.5
         version: 0.7.5(patch_hash=lnlgu6ima7yc5izm4rja3sptd4)(@prefresh/core@1.5.2(preact@10.23.1))(@prefresh/utils@1.2.0)
-      '@types/node':
-        specifier: 'catalog:'
-        version: 22.5.0
-      '@types/webpack':
-        specifier: 'catalog:'
-        version: 5.28.5
-      '@types/webpack-env':
-        specifier: 'catalog:'
-        version: 1.18.5
-      typescript:
-        specifier: 'catalog:'
-        version: 5.3.3
 
 packages:
 

@@ -34,9 +34,6 @@
 	},
 	"devDependencies": {
 		"@rspack/cli": "catalog:",
-		"@rspack/core": "catalog:",
-		"@types/node": "catalog:",
-		"@types/webpack-env": "catalog:",
-		"typescript": "catalog:"
+		"@rspack/core": "catalog:"
 	}
 }
